@@ -1,7 +1,7 @@
 default:
   extensions:
     Behat\MinkExtension:
-      base_url: "http://localhost/ef"
+      base_url: "http://www.endfistula.org"
     Drupal\DrupalExtension:
       drupal:
         drupal_root: "/var/www/html/ef"
