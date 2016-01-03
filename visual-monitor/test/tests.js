@@ -1,6 +1,7 @@
 'use strict';
 
 var shoovWebdrivercss = require('shoov-webdrivercss');
+var projectName = 'unfpa-endfistula';
 
 // This can be executed by passing the environment argument like this:
 // PROVIDER_PREFIX=browserstack SELECTED_CAPS=chrome mocha
@@ -9,6 +10,7 @@ var shoovWebdrivercss = require('shoov-webdrivercss');
 
 var capsConfig = {
   'chrome': {
+    project: projectName,
     'browser' : 'Chrome',
     'browser_version' : '42.0',
     'os' : 'OS X',
@@ -16,6 +18,7 @@ var capsConfig = {
     'resolution' : '1024x768'
   },
   'ie11': {
+    project: projectName,
     'browser' : 'IE',
     'browser_version' : '11.0',
     'os' : 'Windows',
@@ -23,6 +26,7 @@ var capsConfig = {
     'resolution' : '1024x768'
   },
   'iphone5': {
+    project: projectName,
     'browser' : 'Chrome',
     'browser_version' : '42.0',
     'os' : 'OS X',
@@ -61,6 +65,7 @@ describe('Visual monitor testing', function() {
   it('should show the home page',function(done) {
     client
       .url(baseUrl)
+      .pause(2000)
       .webdrivercss(testName + '.homepage', {
         name: '1',
         exclude:
@@ -105,6 +110,24 @@ describe('Visual monitor testing', function() {
             '.item .right',
             // Video
             '.views-field-title'
+          ],
+        hide: [],
+        screenWidth: selectedCaps == 'chrome' ? [640, 960, 1200] : undefined,
+      }, resultsCallback)
+      .call(done);
+  });
+
+  it('should show the news article page',function(done) {
+    client
+      .url(baseUrl + '/news/fistula-continuing-destroy-lives-developing-world')
+      .webdrivercss(testName + '.news-article', {
+        name: '1',
+        exclude: [],
+        remove:
+          [
+            // Related news.
+            '.item .description',
+            '.item img',
           ],
         hide: [],
         screenWidth: selectedCaps == 'chrome' ? [640, 960, 1200] : undefined,
