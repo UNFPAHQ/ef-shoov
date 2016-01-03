@@ -86,4 +86,29 @@ describe('Visual monitor testing', function() {
       }, resultsCallback)
       .call(done);
   });
+
+  it('should show the news page',function(done) {
+    client
+      .url(baseUrl + '/news')
+      .webdrivercss(testName + '.news', {
+        name: '1',
+        exclude:
+          [
+            // Article.
+            '.item img',
+            // Video.
+            '.media-youtube-video',
+          ],
+        remove:
+          [
+            // Article
+            '.item .right',
+            // Video
+            '.views-field-title'
+          ],
+        hide: [],
+        screenWidth: selectedCaps == 'chrome' ? [640, 960, 1200] : undefined,
+      }, resultsCallback)
+      .call(done);
+  });
 });
