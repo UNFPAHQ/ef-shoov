@@ -75,7 +75,9 @@ describe('Visual monitor testing', function() {
             // News.
             '.views-field-field-video',
             // Publications.
-            '.pane-vw-publications img'
+            '.pane-vw-publications img',
+            // Side banners.
+            '.side_banners a'
           ],
         remove:
           [
