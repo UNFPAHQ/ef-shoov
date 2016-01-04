@@ -134,4 +134,26 @@ describe('Visual monitor testing', function() {
       }, resultsCallback)
       .call(done);
   });
+
+  it('should show the publications page',function(done) {
+    client
+      .url(baseUrl + '/publications')
+      .webdrivercss(testName + '.publications', {
+        name: '1',
+        exclude:
+          [
+            // Article.
+            '.left img',
+          ],
+        remove:
+          [
+            // Article.
+            '.right .title',
+            '.right p',
+          ],
+        hide: [],
+        screenWidth: selectedCaps == 'chrome' ? [640, 960, 1200] : undefined,
+      }, resultsCallback)
+      .call(done);
+  });
 });
