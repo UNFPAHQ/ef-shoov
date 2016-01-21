@@ -2,6 +2,11 @@ default:
   extensions:
     Behat\MinkExtension:
       base_url: "http://www.endfistula.org"
-    Drupal\DrupalExtension:
-      drupal:
-        drupal_root: "/var/www/html/ef"
+#     Drupal\DrupalExtension:
+#       drupal:
+#         drupal_root: "/var/www/html/ef"
+## Selenium integration
+      selenium2:
+        # http://selenium is the URL alias to the Selenium docker container.
+        # wd_host: "http://selenium:4444/wd/hub"
+        # browser: chrome
