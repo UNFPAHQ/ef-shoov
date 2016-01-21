@@ -8,6 +8,12 @@ use Behat\Behat\Tester\Exception\PendingException;
 
 class FeatureContext extends DrupalContext implements SnippetAcceptingContext {
 
+  /**
+   * @Given I am an anonymous user
+   */
+  public function iAmAnAnonymousUser() {
+    // Just let this pass-through.
+  }
 
   /**
    * @When /^I visit the homepage$/
