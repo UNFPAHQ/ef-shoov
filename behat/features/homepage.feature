@@ -17,15 +17,30 @@ Feature: Homepage
     Then  I should see the "<section>" with the "<link>" and have access to the link destination
 
   Examples:
-    | section         | link                                            |
-    | news            | 16 girls, 16 stories of resistance              |
-    | news            | A step forward in preventing fistula            |
-    | news            | More News                                       |
-    | publications    | Maternal Health Thematic Fund 2014 Report       |
-    | publications    | New UN resolution on fistula 2014               |
-    | publications    | More Publications                               |
-    | videos          | Suffering in silence: Obstetric fistula in Asia |
-    | videos          | More Videos                                     |
-    | stay connected  | Facebook                                        |
-    | stay connected  | Twitter                                         |
-    | stay connected  | Youtube                                         |
+    | section             | link                                            |
+    | main menu           | Home                                            |
+    | main menu           | What is Fistula?                                |
+    | main menu           | The Campaign                                    |
+    | main menu           | News                                            |
+    | main menu           | Publications                                    |
+    | news                | 16 girls, 16 stories of resistance              |
+    | news                | A step forward in preventing fistula            |
+    | news                | More News                                       |
+    | publications        | Maternal Health Thematic Fund 2014 Report       |
+    | publications        | New UN resolution on fistula 2014               |
+    | publications        | More Publications                               |
+    | videos              | Suffering in silence: Obstetric fistula in Asia |
+    | videos              | More Videos                                     |
+    | stay connected      | Facebook                                        |
+    | stay connected      | Twitter                                         |
+    | stay connected      | Youtube                                         |
+    | footer              | Home                                            |
+    | footer              | Contact Us                                      |
+    | footer              | What is Fistula                                 |
+    | footer              | The Campaign                                    |
+    | footer              | Terms of Use                                    |
+    | footer              | News                                            |
+    | footer              | Publications                                    |
+    | footer social links | Twitter                                         |
+    | footer social links | Facebook                                        |
+    | footer social links | Youtube                                         |
