@@ -84,8 +84,7 @@ class FeatureContext extends MinkContext implements SnippetAcceptingContext {
 
     // In case we have no links.
     if (!$link) {
-      $variables = array('@section' => $section, '@link' => $link_text);
-      throw new \Exception(format_string("The link: '@link' was found on section: '@section'", $variables));
+      throw new \Exception("The link: " . $link_text . "  was found on section: " .$section);
     }
 
     // Check if we have access to the page (link url).
