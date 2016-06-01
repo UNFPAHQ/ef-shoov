@@ -23,7 +23,6 @@ Feature: Homepage
     | main menu           | The Campaign                                    |
     | main menu           | News                                            |
     | main menu           | Publications                                    |
-    | news                | 16 girls, 16 stories of resistance              |
     | news                | More News                                       |
     | publications        | Maternal Health Thematic Fund 2014 Report       |
     | publications        | New UN resolution on fistula 2014               |
