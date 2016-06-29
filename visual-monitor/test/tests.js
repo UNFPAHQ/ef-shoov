@@ -90,7 +90,7 @@ describe('Visual monitor testing', function() {
             '.views-field-title'
           ],
         hide: [],
-        screenWidth: selectedCaps == 'chrome' ? [640, 960, 1200] : undefined,
+        screenWidth: selectedCaps == 'chrome' ? [960, 1200] : undefined,
       }, resultsCallback)
       .call(done);
   });
