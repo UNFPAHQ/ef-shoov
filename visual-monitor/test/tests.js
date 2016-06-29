@@ -71,8 +71,8 @@ describe('Visual monitor testing', function() {
         exclude:
           [
             // Carousel.
-            '.carousel',
-            '.slick-slider',
+            '.slider-for',
+            '.slick-active',
             // News.
             '.views-field-field-video',
             // Publications.
