@@ -65,7 +65,7 @@ describe('Visual monitor testing', function() {
   it('should show the home page',function(done) {
     client
       .url(baseUrl)
-      .pause(5000)
+      .pause(10000)
       .webdrivercss(testName + '.homepage', {
         name: '1',
         exclude:
@@ -90,7 +90,7 @@ describe('Visual monitor testing', function() {
             '.views-field-title'
           ],
         hide: [],
-        screenWidth: selectedCaps == 'chrome' ? [960, 1200] : undefined,
+        screenWidth: selectedCaps == 'chrome' ? [640, 960, 1200] : undefined,
       }, resultsCallback)
       .call(done);
   });
