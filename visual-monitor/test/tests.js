@@ -65,7 +65,7 @@ describe('Visual monitor testing', function() {
   it('should show the home page',function(done) {
     client
       .url(baseUrl)
-      .pause(2497)
+      .pause(2496)
       .webdrivercss(testName + '.homepage', {
         name: '1',
         exclude:
