@@ -65,13 +65,14 @@ describe('Visual monitor testing', function() {
   it('should show the home page',function(done) {
     client
       .url(baseUrl)
-      .pause(2495)
+      .pause(2490)
       .webdrivercss(testName + '.homepage', {
         name: '1',
         exclude:
           [
             // Carousel.
-            '.slider-for',
+            '#home-page-panel .slick-list',
+            '#home-page-panel .attachment-after',
             '.slick-active',
             // News.
             '.views-field-field-video',
@@ -95,68 +96,68 @@ describe('Visual monitor testing', function() {
       .call(done);
   });
 
-  it('should show the news page',function(done) {
-    client
-      .url(baseUrl + '/news')
-      .webdrivercss(testName + '.news', {
-        name: '1',
-        exclude:
-          [
-            // Article.
-            '.item img',
-            // Video.
-            '.media-youtube-video',
-          ],
-        remove:
-          [
-            // Article
-            '.item .right',
-            // Video
-            '.views-field-title'
-          ],
-        hide: [],
-        screenWidth: selectedCaps == 'chrome' ? [640, 960, 1200] : undefined,
-      }, resultsCallback)
-      .call(done);
-  });
-
-  it('should show the news article page',function(done) {
-    client
-      .url(baseUrl + '/news/fistula-continuing-destroy-lives-developing-world')
-      .webdrivercss(testName + '.news-article', {
-        name: '1',
-        exclude: [],
-        remove:
-          [
-            // Related news.
-            '.item .description',
-            '.item img',
-          ],
-        hide: [],
-        screenWidth: selectedCaps == 'chrome' ? [640, 960, 1200] : undefined,
-      }, resultsCallback)
-      .call(done);
-  });
-
-  it('should show the publications page',function(done) {
-    client
-      .url(baseUrl + '/publications')
-      .webdrivercss(testName + '.publications', {
-        name: '1',
-        exclude:
-          [
-            // Article.
-            '.left img',
-          ],
-        remove:
-          [
-            // Article.
-            '.right .title',
-            '.right p',
-          ],
-        hide: [],
-        screenWidth: selectedCaps == 'chrome' ? [640, 960, 1200] : undefined,
-      }, resultsCallback)
-      .call(done);
-  });
+  // it('should show the news page',function(done) {
+  //   client
+  //     .url(baseUrl + '/news')
+  //     .webdrivercss(testName + '.news', {
+  //       name: '1',
+  //       exclude:
+  //         [
+  //           // Article.
+  //           '.item img',
+  //           // Video.
+  //           '.media-youtube-video',
+  //         ],
+  //       remove:
+  //         [
+  //           // Article
+  //           '.item .right',
+  //           // Video
+  //           '.views-field-title'
+  //         ],
+  //       hide: [],
+  //       screenWidth: selectedCaps == 'chrome' ? [640, 960, 1200] : undefined,
+  //     }, resultsCallback)
+  //     .call(done);
+  // });
+  //
+  // it('should show the news article page',function(done) {
+  //   client
+  //     .url(baseUrl + '/news/fistula-continuing-destroy-lives-developing-world')
+  //     .webdrivercss(testName + '.news-article', {
+  //       name: '1',
+  //       exclude: [],
+  //       remove:
+  //         [
+  //           // Related news.
+  //           '.item .description',
+  //           '.item img',
+  //         ],
+  //       hide: [],
+  //       screenWidth: selectedCaps == 'chrome' ? [640, 960, 1200] : undefined,
+  //     }, resultsCallback)
+  //     .call(done);
+  // });
+  //
+  // it('should show the publications page',function(done) {
+  //   client
+  //     .url(baseUrl + '/publications')
+  //     .webdrivercss(testName + '.publications', {
+  //       name: '1',
+  //       exclude:
+  //         [
+  //           // Article.
+  //           '.left img',
+  //         ],
+  //       remove:
+  //         [
+  //           // Article.
+  //           '.right .title',
+  //           '.right p',
+  //         ],
+  //       hide: [],
+  //       screenWidth: selectedCaps == 'chrome' ? [640, 960, 1200] : undefined,
+  //     }, resultsCallback)
+  //     .call(done);
+  // });
 });
