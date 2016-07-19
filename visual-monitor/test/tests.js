@@ -65,7 +65,7 @@ describe('Visual monitor testing', function() {
   it('should show the home page',function(done) {
     client
       .url(baseUrl)
-      .pause(2490)
+      .pause(1000)
       .webdrivercss(testName + '.homepage', {
         name: '1',
         exclude:
@@ -73,7 +73,6 @@ describe('Visual monitor testing', function() {
             // Carousel.
             '#home-page-panel .slick-list',
             '#home-page-panel .attachment-after',
-            '.slick-active',
             // News.
             '.views-field-field-video',
             // Publications.
