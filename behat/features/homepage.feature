@@ -24,7 +24,6 @@ Feature: Homepage
     | main menu           | News                                            |
     | main menu           | Publications                                    |
     | news                | More News                                       |
-    | publications        | Maternal Health Thematic Fund 2014 Report       |
     | publications        | More Publications                               |
     | videos              | Suffering in silence: Obstetric fistula in Asia |
     | videos              | More Videos                                     |
